@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import ChatMessage from './ChatMessages';
 import axios from 'axios'
 function ChatRoom({ username }) {
@@ -9,7 +9,7 @@ function ChatRoom({ username }) {
 
       const sendTrigger=async()=>{
       
-        const data=   await axios.get(`${process.env.REACT_APP_BASE_URL_PORT}/api/messages`);
+          await axios.get(`${process.env.REACT_APP_BASE_URL_PORT}/api/messages`);
      
 
 
