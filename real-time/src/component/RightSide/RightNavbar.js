@@ -21,13 +21,14 @@ function RightNavbar() {
     }
   }
   
-  // console.log(receiver[0].user.name)
+  console.log(receiver)
   const closeModal = () => {
     setShowModal(false);
   };
 
   return (
     <>
+    {receiver.length>0 ? <>
       <div className="RN-1">
         <div className="RN-2">
           <img
@@ -52,7 +53,8 @@ function RightNavbar() {
             </Modal>
           )}
         </div>
-      </div>
+      </div></>:<><h1>loading..</h1></>}
+      
     </>
   );
 }

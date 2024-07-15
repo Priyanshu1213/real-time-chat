@@ -65,11 +65,10 @@ function LoginForm() {
   return (
     <div className="login-form">
 
-    <div>
-      <img   src="https://web.whatsapp.com/img/native-desktop-hero_a22b846aefcd2de817624e95873b2064.png" alt="imag" />
-    </div>
-      <h2>Login</h2>
+    
+      
       <form onSubmit={handleSubmit}>
+      <h2>Login</h2>
         <div className="form-group">
           <label>Email</label>
           <input
@@ -91,6 +90,11 @@ function LoginForm() {
         <button type="submit" onClick={loginButton}>
           Login
         </button>
+        <br />
+        <br />
+        
+        <u onClick={() => navigate('/')}>Create New Users</u>
+
       </form>
     </div>
   );

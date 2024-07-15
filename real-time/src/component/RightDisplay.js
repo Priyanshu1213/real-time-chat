@@ -3,7 +3,7 @@ import "../App.css"; // Import your CSS file for styling
 
 const CenteredText = () => {
   return (
-    <div>
+    <div style={{width:"100%", height:"100vh", backgroundColor:"rgb(0 0 0 / 49%)"}}>
     
  <div className="centered-text">
     

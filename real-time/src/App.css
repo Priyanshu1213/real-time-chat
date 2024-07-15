@@ -52,20 +52,22 @@
 .contact-item {
   display: flex;
   align-items: center;
-  padding: 10px;
+  margin-top: -7px;
+  
  
 }
 
 .left-section {
   flex: 0 0 auto; 
+  margin-top: 7px;
   margin-right: 10px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px ;
 }
 
 .profile-pic {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -80,8 +82,23 @@
 
 .description {
   font-size: 14px;
+  overflow: hidden; /* Hides any content that exceeds the dimensions */
+  /* border: 1px solid; */
+  display: -webkit-box; /* Required for webkit-based browsers */
+  -webkit-box-orient: vertical; /* Required for webkit-based browsers */
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  white-space: normal;
 }
 
+.description p{
+  margin: 0; /* Remove default margin */
+  display: -webkit-box; /* Required for webkit-based browsers */
+  -webkit-box-orient: vertical; /* Required for webkit-based browsers */
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  overflow: hidden; /* Hides overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) to indicate truncated text */
+  white-space: normal; 
+}
 .delete-button {
   background-color: #ff0000;
   color: white;
@@ -128,6 +145,7 @@
   width: 90%;
   max-width: 450px;
   max-height: 600px;
+ 
   text-align: center;
   position: relative;
 }
@@ -167,7 +185,7 @@
 
 .chat-app{
 
-  height: 600px;
+ 
 }
 
 .notification-container{
@@ -221,9 +239,11 @@
 
 }
 .close-button {
-  position: absolute;
+  width: 12%;
+  position: sticky;
   top: 10px;
   right: 10px;
+  margin-left: 90%;
   background: none;
   border: none;
   font-size: 24px;
@@ -276,7 +296,7 @@
   background:rgb(42 68 89);
 
   font-size: 24px;
-  height: 90px;
+  height: 10vh;
   cursor: pointer;
   color:#d1d7db;
 
@@ -311,9 +331,9 @@
 .FP-1{
   display: flex;
   justify-content: space-between;
-  width: 92%;
-  margin-left: 4%;
-  /* margin-top: 1%; */
+  width:100%;
+ 
+  
   border-radius: 10px;
 
 
@@ -322,13 +342,13 @@
   display: flex;
   justify-content: center; /* Center the content horizontally for modern browsers */
   align-items: center; /* Center the content vertically */
-  height: 100vh;
+  
 }
 
 .LP-1{
   order: 1;
   background-color: #111b21;
-  height: 800px;
+  height: 100vh;
   width: 30%;
   border-right: 1px solid #47555f;
   border-bottom-left-radius: 15px;
@@ -337,7 +357,7 @@
 }
 
 .friendslist{
-  height: 640px;
+  height: 77vh;
   overflow: auto;
 }
 .friendslist::-webkit-scrollbar {
@@ -356,25 +376,37 @@
   background: transparent;
 }
 
+
+
 .logout{
-margin-top: 10px;
-  height: 65px;
-  background-color   :  #202c33;
-  border-bottom-left-radius: 15px;
-}
-.logoutbutton{
-  width: 70px;
-  height:35px;
-  margin-top: 3%;
-  margin-left: 10px;
-  background-color: #47555f;
-}
+  margin-top: 0px;
+  height: 50px;
+  background-color   :transparent;
+  display: flex;
+  justify-content: center;
+  }
+  .logoutbutton{
+    width: 30%;
+    height:7vh;
+    margin-top: 1%;
+    border-radius: 4%;
+    background-color: #25D366;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    font-size: 20px;
+    
+   
+  }
+  .logoutbutton:hover{
+    background-color: #128c7e;
+    
+  }
 
 .RP-1{
   order: 2;
   background:  #203441;;
   width: 70%;
-  height: 800px;
+  height: 100vh;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 
@@ -445,7 +477,7 @@ margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 69vh;
   background-color: #111b217e;
 }
 
@@ -511,7 +543,6 @@ margin-top: 10px;
 .LP-1{
   order: 1;
   background-color: #111b21;
-  height: 400px;
   width: 100%;
   border-right: 1px solid #47555f;
   border-bottom-left-radius: 0px;
@@ -520,13 +551,20 @@ margin-top: 10px;
 }
 .TN-1{
   display:inline;
+  width: 100%;
+  height: 100vh;
 }
 
+
 .friendslist{
-  height: 750px;
+  
+  height: 83vh;
   overflow: auto;
-  background:  #203441;;
+  background:  #203441;
 }
+
+
+
 
 .CP-1{
   order: 2;
@@ -536,17 +574,19 @@ margin-top: 10px;
   border-bottom-right-radius: 0px;
   margin-top: 0px;
   display: flex;
+  justify-content: center;
+ height: 100vh;
 
 }
 .CP-2{
   width: 100%;
-  height: 900px;
+  height: 100vh;
 }
 .RP-1{
   order: 2;
   background:  #203441;;
   width: 100%;
-  /* height: 500px; */
+  
   border-top-right-radius: 0px;
   border-bottom-right-radius: 15px;
   margin-top: 2px;
@@ -606,21 +646,24 @@ margin-top: 10px;
 .logout{
   margin-top: 0px;
   height: 65px;
-  background-color   :  #202c33;
-  border-bottom-left-radius: 0px;
-  /* margin-top: 0px;
-    height: 0px;
-    background-color   :  transparent;
-    border-bottom-left-radius: 0px;
-    pointer-events: none;
-    opacity: 0.0; */
+  background-color   :transparent;
+  display: flex;
+  justify-content: center;
   }
   .logoutbutton{
-    width: 0px;
-    height:0px;
-    margin-top: 0%;
-    margin-left: 0px;
-    background-color: transparent;
+    width: 30%;
+    height:6vh;
+    margin-top: 1%;
+    border-radius: 10%;
+    background-color: #25D366;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    font-size: 20px;
+   
+  }
+  .logoutbutton:hover{
+    background-color: #128c7e;
+    
   }
 
   .contact-item {
@@ -644,54 +687,3 @@ margin-top: 10px;
 }
 
 
-
-@media (max-width: 1025px) {
-  .adminName{
-    margin-right: 0px;
-    font-weight: bold;
-  }
-  .notification {
-    display: flex;
-    margin-right: 40px;
-
-    margin-left: 0%;
-    margin-top: 0px;
-}
-.LP-1 {
-  order: 1;
-  background-color: #111b21;
-  height: 800px;
-  min-width: 300px;
-  border-right: 1px solid #47555f;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-}
-
-.FP-1 {
-  display: flex;
-  justify-content: space-between;
-  min-width: 300px;
-  margin-left: 4%;
-  /* margin-top: 1%; */
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-}
-/* @media (max-width: 825px) {
-  .adminName{
-    margin-right: 0px;
-    font-weight: bold;
-  }
-  .notification {
-    display: flex;
-    margin-right: 40px;
-
-    margin-left: 0%;
-    margin-top: 0px;
-}
-} */

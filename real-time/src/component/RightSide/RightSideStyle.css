@@ -35,7 +35,7 @@
   }
   
   .RN-4 button {
-    background-color: #4caf50;
+    background-color: #25D366;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -63,7 +63,9 @@
   background-color: #202c33;
   color: #fff;
   padding: 10px;
+  margin-top: 10px;
   height: 60px;
+  border-radius: 20px;
 }
 
 .emogi {
@@ -78,6 +80,7 @@
 .inputform {
   display: flex;
   align-items: center;
+  
 }
 
 input {
@@ -85,7 +88,8 @@ input {
   padding: 5px;
   border: none;
   border-radius: 4px;
-  height: 40px;
+  height: 28px;
+  font-size: 15px;
 }
 
 .send {
@@ -95,7 +99,7 @@ input {
 
 
 .sendButton {
-  background-color: #4caf50;
+  background-color: #25D366;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -126,10 +130,10 @@ input {
 /* RightBody.css */
 .RB-1 {
   width: 94%; /* Set a fixed width for the div */
-  height: 600px; /* Set a fixed height for the div */
+  height: 70vh; /* Set a fixed height for the div */
   overflow: auto; /* Enable vertical and horizontal scrolling when content overflows */
   /* border: 1px solid #ccc; Add a border for visual separation */
-  padding: 10px;
+ 
   margin-left: 2%; /* Add padding to the content area */
   /* color: white; */
  
@@ -175,18 +179,22 @@ input {
 .message-sender {
   float: left;
   max-width: 45%;
-  background-color: #1fc496;
-  color: #000000;
+  background-color: #017c4d;
+  color: #ffffff;
   border-radius: 3%;
- 
+ /* height: 5vh; */
+ border-radius: 7px;
+  min-width: 10%;
 }
 
 .message-receiver {
   float: right;
+  /* height: 5vh; */
   max-width: 45%;
-  background-color: #ccc;
+  background-color: #ffffff;
   color: #000;
-  border-radius: 3%;
+  border-radius: 7px;
+  min-width: 10%;
   
 }
 
@@ -209,8 +217,13 @@ input {
 .CH-TXT{
    margin-left: 8px;
   margin-right: 5px; 
-  font-size: 14px;
+  font-size: 15px;
+  margin-top: 2px;
+  margin-bottom: 5px;
   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  
  
 }
 
@@ -234,12 +247,12 @@ input {
 @media (max-width: 468px) {
 
   .RB-1 {
-    width: 94%; /* Set a fixed width for the div */
+    width: 95%; /* Set a fixed width for the div */
     /* height: 670px; */
-    height: 755px;
+    height: 81vh;
     overflow: auto; /* Enable vertical and horizontal scrolling when content overflows */
     /* border: 1px solid #ccc; Add a border for visual separation */
-    padding: 10px;
+    /* padding: 10px; */
     margin-left: 2%; /* Add padding to the content area */
     /* color: white; */
    
@@ -253,21 +266,22 @@ input {
     flex-grow: 1; /* Make the input field fill the available space */
     padding: 5px;
     border: none;
-    border-radius: 4px;
-    height: 80%;
+    border-radius: px;
+    height: 26px;
   }
 
   .RF-1 {
     
     display: flex;
     padding: 10px;
+    justify-content: space-around;
     /* margin-top: 14%; */
     /* height: 40px; */
   }
 
-  .send{
-    margin-left: 10px;
-  }
+  /* .send{
+    margin-left: 30px;
+  } */
 
   
     .RN-1 {

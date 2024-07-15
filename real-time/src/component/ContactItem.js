@@ -13,7 +13,9 @@ const ContactItem = (props) => {
       </div>
       <div className="right-section">
         <div className="name">{props.contactName}</div>
-        <div className="description">{props.discription}</div>
+        <div className="description">
+          <p>{props.discription}</p>
+          </div>
       </div>
     </div>
   );

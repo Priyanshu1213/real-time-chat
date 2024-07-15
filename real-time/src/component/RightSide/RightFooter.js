@@ -116,6 +116,15 @@ export default function RightFooter() {
     setUserChat(e.target.value);
   };
 
+  const handleKeyDown = (e) => {
+    
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent default form submission behavior
+
+      sendChat();
+    }
+  };
+
   return (
     <>
       <div className="RF-1">
@@ -136,14 +145,12 @@ export default function RightFooter() {
               type="text"
               value={userChat}
               onChange={takeChat}
+              onKeyDown={handleKeyDown}
             />
           </form>
         </div>
         <div className="send">
-          <button className="sendButton" onKeyDown={(e) => {
-        if (e.key === "Enter")
-          sendChat();
-        }} onClick={sendChat}>
+          <button className="sendButton" onClick={sendChat}>
             Send
           </button>
         </div>

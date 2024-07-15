@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,} from "react";
+import { useNavigate } from 'react-router-dom'
 import "../App.css";
 import ContactItem from "./ContactItem";
 import Modal from "../component/Models/Modal";
@@ -11,6 +12,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Badge, IconButton } from "@mui/material";
 
 const LeftNavbar = () => {
+  const  Navigate=new useNavigate()
   const tt ="https://static.vecteezy.com/system/resources/thumbnails/019/900/322/small/happy-young-cute-illustration-face-profile-png.png";
 
   const admin = JSON.parse(localStorage.getItem("admin"));
@@ -91,6 +93,10 @@ useEffect(()=>{
   const [notiCount,setNotiCount]=useState()
    const notificationCount=useSelector((state)=>state.NotificationState)
  
+
+
+   
+  
   return (
     <>
       <div className="navbar">
@@ -141,7 +147,7 @@ useEffect(()=>{
       </div>
 
       <div className="logout"> 
-      <button className="logoutbutton">Logut</button>
+      <button className="logoutbutton" onClick={()=>Navigate('/login')}>Logut</button>
       </div>
     
     </>
