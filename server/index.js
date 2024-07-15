@@ -17,7 +17,7 @@ app.use(express.static(buildpath));
 
 const io = socketIo(server, {
   cors: {
-    origin: `http://localhost:3000`,
+    origin: `https://real-time-chat-five-blush.vercel.app`,
     // origin: `http://${process.env.PORT}:5000`,
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
