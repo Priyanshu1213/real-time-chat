@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import  LeftPart from "../LeftNavbar"
 import ContactItem from "../ContactItem";
 import Modal from "../../component/Models/Modal";
@@ -120,7 +121,7 @@ const TopNavbar =()=>{
       </div>
 
       <div className="logout"> 
-      <button className="logoutbutton">Logut</button>
+      <button className="logoutbutton" onClick={()=>Navigate('/login')}>Logut</button>
       </div>
         {/* </div> */}
         </div>
