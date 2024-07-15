@@ -121,7 +121,7 @@ const TopNavbar =()=>{
       </div>
 
       <div className="logout"> 
-      <button className="logoutbutton" onClick={()=>Navigate('/login')}>Logut</button>
+      <button className="logoutbutton" onClick={()=>navigate('/login')}>Logut</button>
       </div>
         {/* </div> */}
         </div>
