@@ -10,6 +10,7 @@ dotenv.config();
 const path = require("path");
 
 app.use(cors());
+app.use(express.json())
 
 const _dirname = path.dirname("");
 const buildpath = path.join(_dirname, "../real-time/build");
@@ -18,7 +19,7 @@ app.use(express.static(buildpath));
 const io = socketIo(server, {
   cors: {
     origin: `https://real-time-chat-five-blush.vercel.app`,
-    // origin: `http://${process.env.PORT}:5000`,
+    // origin: `http://localhost:3000`,
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,

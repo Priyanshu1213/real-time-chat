@@ -65,6 +65,7 @@ const TopNavbar =()=>{
     useEffect(() => {}, [showModal2, friends]);
     const [notiCount,setNotiCount]=useState()
      const notificationCount=useSelector((state)=>state.NotificationState)
+     
    const navigate2=()=>{
     navigate('/login')
    }

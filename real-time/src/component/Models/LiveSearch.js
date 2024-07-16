@@ -42,9 +42,12 @@ function LiveSearch(props) {
       const userId= props;
       // console.log(props)
       const myId= admin._id
-      await axios.get(`${process.env.REACT_APP_BASE_URL_PORT}/api/add?friendId=${userId}&myId=${myId}`)
 
+      console.log(userId)
+const d121=      await axios.get(`${process.env.REACT_APP_BASE_URL_PORT}/api/add?friendId=${userId}&myId=${myId}`)
+console.log(d121)
      const friendList= await axios.get(`${process.env.REACT_APP_BASE_URL_PORT}/api/getusers?userId=${admin._id}`)
+     console.log(friendList)
   dispatch(Friends(friendList.data.data[0].friends))
     
   }

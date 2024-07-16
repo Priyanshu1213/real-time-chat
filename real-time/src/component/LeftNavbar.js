@@ -16,7 +16,10 @@ const LeftNavbar = () => {
   const tt ="https://static.vecteezy.com/system/resources/thumbnails/019/900/322/small/happy-young-cute-illustration-face-profile-png.png";
 
   const admin = JSON.parse(localStorage.getItem("admin"));
+  const admin1212 = useSelector((state)=>state)
+  console.log(admin1212)
   const friends1 = admin.friends;
+  console.log(admin)
   let friends;
   const friends2=useSelector((state)=>state.Friends)
 
@@ -38,8 +41,10 @@ const LeftNavbar = () => {
 // }
 if(friends2.length===0){
   friends=friends1;
+  console.log(friends)
  }else {
    friends=friends2;
+   console.log(friends)
  }
 
 const updateder=()=>{
@@ -76,7 +81,17 @@ useEffect(()=>{
       chatName: admin.name,
       users: [props._id, admin._id],
       messageAccesser: admin._id,
-    });
+    },{
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    
+  );
+    console.log(response.data)
+    console.log(admin.name)
+    console.log(admin._id)
+    console.log(props._id)
 
     const chats = await axios.get(
       `${process.env.REACT_APP_BASE_URL_PORT}/api/getmessages?chatId=${response.data.data[0]._id}`
